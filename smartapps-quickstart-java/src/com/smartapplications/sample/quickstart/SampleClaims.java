@@ -10,7 +10,7 @@ import java.util.List;
 import com.smartapplications.libraries.OAuth2;
 import com.smartapplications.libraries.OAuthConstants;
 
-
+//SAMPLE CLIENT 
 
 public class SampleClaims {
 	
