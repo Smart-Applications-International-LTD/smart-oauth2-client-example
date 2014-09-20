@@ -39,7 +39,7 @@ public class SampleProviders {
 		 * Demonstration of a simple POST request to the SMART API. i.e clients
 		 * can use it to give smart a list of providers.
 		 */
-
+/*
 		// ////////////////////////////////////////////////////////////////////////////////
 
 		// Url to the protected resource
@@ -52,12 +52,18 @@ public class SampleProviders {
 		// To make sure all our query parameters are encoded properly we add
 		// them
 		// using scribe rather than putting them in the URL
-		request.addQuerystringParameter("clnCode", "6686");
-		request.addQuerystringParameter("companyName", "567");
-		request.addQuerystringParameter("polId", "27441064");
-		request.addQuerystringParameter("alphaCount", "FRED");
-		request.addQuerystringParameter("clnPolCode", "MULAMA");
-		request.addQuerystringParameter("smartCode2", "BUKHAYA");
+		request.addQuerystringParameter("clnProvCode", "6");
+		request.addQuerystringParameter("clnDescription", "545");
+		request.addQuerystringParameter("town", "4");
+		request.addQuerystringParameter("building", "44");
+		request.addQuerystringParameter("street", "87");
+		request.addQuerystringParameter("postalNr", "9898");
+		request.addQuerystringParameter("telNr", "878");
+		request.addQuerystringParameter("faxNr", "7887");
+		request.addQuerystringParameter("emailAddress", "78");
+		request.addQuerystringParameter("contactPerson", "87");
+		request.addQuerystringParameter("sateliteProv", "44");
+		request.addQuerystringParameter("smartDescription", "57");
 
 		// Below parameters are required to process your request
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
@@ -89,143 +95,127 @@ public class SampleProviders {
 
 		}
 		// ////////////////////////////////////////////////////////////////////////////////
-
+*/
 		
 		
+	    
 		/**
-		 * Demonstration of a simple GET request to the SMART API. i.e can be
-		 * used by clients to retrieve multiple providers lists.
+		 * Demonstration of a simple GET request to the SMART API.
+		 *  i.e can be used by clients to retrieve multiple Providers lists.
 		 */
-
-		/*
-		 * //////////////////////////////////////////////////////////////////////
-		 * ///////// //Url to the protected resource String REQ_URL =
-		 * OAuthConstants.RESOURCE_SERVER_URL+"/providers";
-		 * 
-		 * // Now let's go and ask a protected resource!
-		 * System.out.println("Now we're going to access a protected resource..."
-		 * ); OAuthRequest request = new OAuthRequest(Verb.GET, REQ_URL);
-		 * 
-		 * // To make sure all our query parameters are encoded properly we add
-		 * them // using scribe rather than putting them in the URL
-		 * request.addQuerystringParameter("customerid",
-		 * authhelper.CUSTOMER_ID()); request.addQuerystringParameter("country",
-		 * "kenya"); request.addQuerystringParameter("format", "json"); //The
-		 * resource server will need you to provide this access_token or else it
-		 * will drop the request request.addQuerystringParameter("access_token",
-		 * access_token);
-		 * 
-		 * ///////////////////////////////OPTIONAL
-		 * PARAMETERS//////////////////////////////
-		 * request.addQuerystringParameter("startindex", "0"); //By default is 0
-		 * i.e start at index request.addQuerystringParameter("maxresults",
-		 * "50"); //By default is 50 i.e maximum of fifty Providers
-		 * request.addQuerystringParameter("status", "0"); //By default is 0 i.e
-		 * Providers not picked request.addQuerystringParameter("restrict", ""); //
-		 * Used when filtering the request
-		 * request.addQuerystringParameter("orderby", "insert_date asc");
-		 * //Order the Providers in what format
-		 * ////////////////////////////////////
-		 * ////////////////////////////////////////////
-		 * 
-		 * //Send the request to the resource server for processing and retreive
-		 * Providers Response response = request.send();
-		 * 
-		 * System.out.println("Got it! Lets see what we found...");
-		 * System.out.println();
-		 * 
-		 * if(!response.isSuccessful()){
-		 * 
-		 * System.out.println(response.getCode()); System.out.println(
-		 * "Something went wrong during the execution of the request");
-		 * System.out.println(response.getBody()); //Log the error in the
-		 * database for review
-		 * 
-		 * }else{
-		 * 
-		 * //The request was successful String content = response.getBody(); //
-		 * System.out.println(content); //Simplest approach is to convert the
-		 * results into a json array JSONObject member_obj = new
-		 * JSONObject(content); JSONArray member_array =
-		 * member_obj.getJSONArray("members");
-		 * 
-		 * //System.out.println(member_array);
-		 * 
-		 * for(int i = 0 ; i < member_array.length() ; i++){
-		 * 
-		 * 
-		 * System.out.print(member_array.getJSONObject(i).getString(
-		 * "membershipNumber")); System.out.print(" : ");
-		 * System.out.println(member_array
-		 * .getJSONObject(i).getString("staffNumber"));
-		 * 
-		 * //YOU CAN NOW SAVE THE DATA INTO A TABLE FOR FUTURE USE }
-		 * 
-		 * 
-		 * 
-		 * }
-		 * 
-		 * //////////////////////////////////////////////////////////////////////
-		 * ////////////////////
-		 */
-
-		/**
-		 * Demonstration of a simple GET request to the SMART API. i.e can be
-		 * used by clients to retrieve a single scheme.
-		 */
-
-		/*
-		 * //////////////////////////////////////////////////////////////////////
-		 * /////////
-		 * 
-		 * //Url to the protected resource //i.e Client requesting for claim
-		 * with id 20013 //Url to the protected resource String REQ_URL =
-		 * OAuthConstants.RESOURCE_SERVER_URL+"/providers/78";
-		 * 
-		 * // Now let's go and ask a protected resource!
-		 * System.out.println("Now we're going to access a protected resource..."
-		 * ); OAuthRequest request = new OAuthRequest(Verb.GET, REQ_URL);
-		 * 
-		 * // To make sure all our query parameters are encoded properly we add
-		 * them // using scribe rather than putting them in the URL
-		 * request.addQuerystringParameter("customerid",
-		 * authhelper.CUSTOMER_ID()); request.addQuerystringParameter("country",
-		 * "kenya"); request.addQuerystringParameter("format", "json"); //The
-		 * resource server will need you to provide this access_token or else it
-		 * will drop the request request.addQuerystringParameter("access_token",
-		 * access_token);
-		 * 
-		 * //Send the request to the resource server for processing and retreive
-		 * Providers Response response = request.send();
-		 * 
-		 * System.out.println("Got it! Lets see what we found...");
-		 * System.out.println();
-		 * 
-		 * if(!response.isSuccessful()){
-		 * 
-		 * System.out.println(response.getCode()); System.out.println(
-		 * "Something went wrong during the execution of the request");
-		 * System.out.println(response.getBody()); //Log the error in the
-		 * database for review
-		 * 
-		 * }else{
-		 * 
-		 * //The request was successful String content = response.getBody(); //
-		 * System.out.println(content); //Simplest approach is to convert the
-		 * results into a json array JSONObject member_obj = new
-		 * JSONObject(content);
-		 * 
-		 * //System.out.println(member_array);
-		 * System.out.println(member_obj.get("membershipNumber")
-		 * +" : "+member_obj.get("staffNumber"));
-		 * 
-		 * }
-		 * 
-		 * //////////////////////////////////////////////////////////////////////
-		 * ////////////////////
-		 */
-
+		
+/*
+	///////////////////////////////////////////////////////////////////////////////
+		//Url to the protected resource 
+		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/providers";
+		
+	    // Now let's go and ask  a protected resource!
+	    System.out.println("Now we're going to access a protected resource...");
+		OAuthRequest request = new OAuthRequest(Verb.GET, REQ_URL);
+		
+		//Below parameters are required to process your request
+		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
+		request.addQuerystringParameter("country", "kenya");
+		request.addQuerystringParameter("format", "json"); 
+		//The resource server will need you to provide this access_token or else it will drop the request
+		request.addQuerystringParameter("access_token", access_token);
+		
+		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
+		request.addQuerystringParameter("startindex", "1"); //By default is 1 i.e start at index 
+		request.addQuerystringParameter("maxresults", "6"); //By default is 30 i.e maximum of fifty providers
+		request.addQuerystringParameter("status", "0");   //By default is 0 i.e providers not picked
+		////////////////////////////////////////////////////////////////////////////////
 	
+		//Send the request to the resource server for processing and retreive providers
+		Response response = request.send();
+
+	    System.out.println("Got it! Lets see what we found...");
+	    System.out.println();
+	    
+	    if(!response.isSuccessful()){
+	    	
+	    	System.out.println(response.getCode());
+	    	System.out.println("Something went wrong during the execution of the request");
+	    	System.out.println(response.getBody());
+	    	//Log the error in the database for review
+	    	
+	    }else{
+           
+	    	//The request was successful
+		    String content = response.getBody();
+           // System.out.println(content);
+		   //Simplest approach is to convert the results  into a json array
+		  //  JSONObject provider_obj = new JSONObject(content);
+		  //  JSONArray provider_array = provider_obj.getJSONArray("providers");
+		    
+		    System.out.println(content);
+		    
+
+		    
+
+		  
+	    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////	
+*/
+	
+	    
+		
+		
+		/**
+		 * Demonstration of a simple GET request to the SMART API.
+		 *  i.e can be used by clients to retrieve a single provider.
+		 */
+		
+/*
+	///////////////////////////////////////////////////////////////////////////////
+
+	    //Url to the protected resource 
+		//i.e Client requesting for provider with id 20013
+		//Url to the protected resource 
+		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/providers/27";
+		
+	    // Now let's go and ask  a protected resource!
+	    System.out.println("Now we're going to access a protected resource...");
+		OAuthRequest request = new OAuthRequest(Verb.GET, REQ_URL);
+		
+		// To make sure all our query parameters are encoded properly we add them
+		// using scribe rather than putting them in the URL
+		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
+		request.addQuerystringParameter("country", "kenya");
+		request.addQuerystringParameter("format", "xml"); 
+		//The resource server will need you to provide this access_token or else it will drop the request
+		request.addQuerystringParameter("access_token", access_token);
+	
+		//Send the request to the resource server for processing and retreive providers
+		Response response = request.send();
+
+	    System.out.println("Got it! Lets see what we found...");
+	    System.out.println();
+	    
+	    if(!response.isSuccessful()){
+	    	
+	    	System.out.println(response.getCode());
+	    	System.out.println("Something went wrong during the execution of the request");
+	    	System.out.println(response.getBody());
+	    	//Log the error in the database for review
+	    	
+	    }else{
+           
+	    	//The request was successful
+		    String content = response.getBody();
+		   //Simplest approach is to convert the results  into a json array
+		    //JSONObject provider_obj = new JSONObject(content);
+
+		    System.out.println(content);
+
+	    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////	
+*/
+		
+
+	    
 	}
 
 }

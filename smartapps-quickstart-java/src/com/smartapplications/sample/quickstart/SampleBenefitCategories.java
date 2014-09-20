@@ -141,13 +141,13 @@ public class SampleBenefitCategories {
 		// using scribe rather than putting them in the URL
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
 		request.addQuerystringParameter("country", "kenya");
-		request.addQuerystringParameter("format", "json"); 
+		request.addQuerystringParameter("format", "xml"); 
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 		
 		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
-		request.addQuerystringParameter("startindex", "0"); //By default is 0 i.e start at index 
-		request.addQuerystringParameter("maxresults", "50"); //By default is 50 i.e maximum of fifty Benefit categories
+		request.addQuerystringParameter("startindex", "1"); //By default is 1 i.e start at index 
+		request.addQuerystringParameter("maxresults", "1"); //By default is 30 i.e maximum of fifty Benefit categories
 		request.addQuerystringParameter("status", "0");   //By default is 0 i.e Benefit categories not picked
 		request.addQuerystringParameter("restrict", "");  // Used when filtering the request
 		request.addQuerystringParameter("orderby", "date_added asc"); //Order the Benefit categories in what format
@@ -170,12 +170,12 @@ public class SampleBenefitCategories {
            
 	    	//The request was successful
 		    String content = response.getBody();
-            //System.out.println(content);
+            System.out.println(content);
 		   //Simplest approach is to convert the results  into a json array
-		    JSONObject benefitCategories_obj = new JSONObject(content);
-		    JSONArray benefitCategories_array = benefitCategories_obj.getJSONArray("benefitCategories");
+		 //   JSONObject benefitCategories_obj = new JSONObject(content);
+		 //   JSONArray benefitCategories_array = benefitCategories_obj.getJSONArray("benefitCategories");
 
-		    System.out.println(benefitCategories_array);
+		  //  System.out.println(benefitCategories_array);
 		  
 	    }
 
@@ -188,14 +188,14 @@ public class SampleBenefitCategories {
 		
 		/**
 		 * Demonstration of a simple GET request to the SMART API.
-		 *  i.e can be used by clients to retrieve a single claim.
+		 *  i.e can be used by clients to retrieve a single benefit category.
 		 */
 		
-
+/*
 	///////////////////////////////////////////////////////////////////////////////
 		//Url to the protected resource 
-		//i.e Client requesting for claim with id 65398
-		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/benefitCategories/3";
+		//i.e Client requesting for benefit category with id 65398
+		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/benefitCategories/43978061";
 		
 	    // Now let's go and ask  a protected resource!
 	    System.out.println("Now we're going to access a protected resource...");
@@ -238,7 +238,7 @@ public class SampleBenefitCategories {
 	    }
 
     //////////////////////////////////////////////////////////////////////////////////////////	
-
+*/
 		
 		
 		

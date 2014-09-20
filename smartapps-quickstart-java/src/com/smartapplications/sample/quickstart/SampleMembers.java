@@ -68,12 +68,6 @@ public class SampleMembers {
 		request.addQuerystringParameter("thirdName", "BUKHAYA");
 		request.addQuerystringParameter("otherNames", "");
 		request.addQuerystringParameter("dob", "2014-07-31");
-		request.addQuerystringParameter("cardSerialNumber", "78987");
-		request.addQuerystringParameter("joinDate", "2014-07-31");
-		request.addQuerystringParameter("deactDate", "2014-07-31");
-		request.addQuerystringParameter("memStatus", "78987");
-		request.addQuerystringParameter("modificationDate", "2014-07-31");
-		request.addQuerystringParameter("actionedDate", "2014-07-31");
 		request.addQuerystringParameter("cutOffAge", "78987");
 		request.addQuerystringParameter("kinFName", "G");
 		request.addQuerystringParameter("kinMName", "78987");
@@ -81,30 +75,22 @@ public class SampleMembers {
 		request.addQuerystringParameter("kinTelNo", "78987");
 		request.addQuerystringParameter("kinEmail", "78987");
 		request.addQuerystringParameter("kinNatId", "78987");
-		//request.addQuerystringParameter("photo", "78987");
 		request.addQuerystringParameter("staffNumber", "YGY");
 		request.addQuerystringParameter("nhifNumber", "aaaaa");
 		request.addQuerystringParameter("gender", "78987");
-		request.addQuerystringParameter("globalId", "678767");
 		request.addQuerystringParameter("membershipNumber", "1163");
 		request.addQuerystringParameter("memType", "78");
 		request.addQuerystringParameter("familyCode", "78987");
-		request.addQuerystringParameter("schemeStartDate", "2014-07-31");
 		request.addQuerystringParameter("userID", "78987");
 		request.addQuerystringParameter("clnPolNumber", "78987");
 		request.addQuerystringParameter("clnComCode", "78987");
 		request.addQuerystringParameter("clnPolCode", "78987");
 		request.addQuerystringParameter("clnPolId", "78987");
-		request.addQuerystringParameter("status", "78987");
-		request.addQuerystringParameter("schemeEndDate", "2014-07-31");
-		request.addQuerystringParameter("recId", "78987");
 		request.addQuerystringParameter("clnUniqueMemNumber", "78987");
-		request.addQuerystringParameter("insertDate", "2014-07-1");
 		request.addQuerystringParameter("clnCatCode", "78987");
 		request.addQuerystringParameter("station", "78987");
 		request.addQuerystringParameter("deptName", "78987");
 		request.addQuerystringParameter("title", "78987");
-		request.addQuerystringParameter("printDate", "2014-07-31");
 		request.addQuerystringParameter("otherNumber", "78987");
 		request.addQuerystringParameter("medicalAllocationCover", "78987");
 		
@@ -115,7 +101,7 @@ public class SampleMembers {
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 	
-		//Send the request to the resource server for processing and retrieve claims
+		//Send the request to the resource server for processing and retrieve members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we have...");
@@ -151,8 +137,8 @@ public class SampleMembers {
 	    //////////////////////////////////////////////////////////////////////////////////
       
 		//Url to the protected resource 
-		//i.e Clients informing us that claim 65398 has switched
-		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/members/789878";
+		//i.e Clients informing us that member 65398 has switched
+		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/members/1411203983689";
 		
 	    // Now let's go and update a protected resource!
 	    System.out.println("Now we're going to update a protected resource...");
@@ -162,49 +148,35 @@ public class SampleMembers {
 		// using scribe rather than putting them in the URL
 		request.addQuerystringParameter("polId", "6686");
 		request.addQuerystringParameter("comId", "567");
-		request.addQuerystringParameter("idNumber", "2272724");
-		request.addQuerystringParameter("surname", "57876796");
-		request.addQuerystringParameter("secondName", "");
-		request.addQuerystringParameter("thirdName", "8889");
+		request.addQuerystringParameter("idNumber", "27441064");
+		request.addQuerystringParameter("surname", "FRED");
+		request.addQuerystringParameter("secondName", "MULAMA");
+		request.addQuerystringParameter("thirdName", "BUKH");
 		request.addQuerystringParameter("otherNames", "");
 		request.addQuerystringParameter("dob", "2014-07-31");
-		request.addQuerystringParameter("cardSerialNumber", "78987");
-		request.addQuerystringParameter("joinDate", "2014-07-31");
-		request.addQuerystringParameter("deactDate", "2014-07-31");
-		request.addQuerystringParameter("memStatus", "78987");
-		request.addQuerystringParameter("modificationDate", "2014-07-31");
-		request.addQuerystringParameter("actionedDate", "2014-07-31");
 		request.addQuerystringParameter("cutOffAge", "78987");
-		request.addQuerystringParameter("kinFName", "78987");
+		request.addQuerystringParameter("kinFName", "G");
 		request.addQuerystringParameter("kinMName", "78987");
 		request.addQuerystringParameter("kinONames", "78987");
 		request.addQuerystringParameter("kinTelNo", "78987");
 		request.addQuerystringParameter("kinEmail", "78987");
 		request.addQuerystringParameter("kinNatId", "78987");
-		//request.addQuerystringParameter("photo", "78987");
-		request.addQuerystringParameter("staffNumber", "bbbbb");
+		request.addQuerystringParameter("staffNumber", "YGY");
 		request.addQuerystringParameter("nhifNumber", "aaaaa");
 		request.addQuerystringParameter("gender", "78987");
-		request.addQuerystringParameter("globalId", "78987");
-		request.addQuerystringParameter("membershipNumber", "cccc");
+		request.addQuerystringParameter("membershipNumber", "1163");
 		request.addQuerystringParameter("memType", "78");
 		request.addQuerystringParameter("familyCode", "78987");
-		request.addQuerystringParameter("schemeStartDate", "2014-07-31");
 		request.addQuerystringParameter("userID", "78987");
 		request.addQuerystringParameter("clnPolNumber", "78987");
 		request.addQuerystringParameter("clnComCode", "78987");
 		request.addQuerystringParameter("clnPolCode", "78987");
 		request.addQuerystringParameter("clnPolId", "78987");
-		request.addQuerystringParameter("status", "78987");
-		request.addQuerystringParameter("schemeEndDate", "2014-07-31");
-		request.addQuerystringParameter("recId", "78987");
 		request.addQuerystringParameter("clnUniqueMemNumber", "78987");
-		request.addQuerystringParameter("insertDate", "2014-07-1");
 		request.addQuerystringParameter("clnCatCode", "78987");
 		request.addQuerystringParameter("station", "78987");
 		request.addQuerystringParameter("deptName", "78987");
 		request.addQuerystringParameter("title", "78987");
-		request.addQuerystringParameter("printDate", "2014-07-31");
 		request.addQuerystringParameter("otherNumber", "78987");
 		request.addQuerystringParameter("medicalAllocationCover", "78987");
 		
@@ -215,7 +187,7 @@ public class SampleMembers {
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 	
-		//Send the request to the resource server for processing and retrieve claims
+		//Send the request to the resource server for processing and retrieve members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what the server has done...");
@@ -252,7 +224,7 @@ public class SampleMembers {
 		 *  i.e can be used by clients to retrieve multiple member lists.
 		 */
 		
-
+/*
 	///////////////////////////////////////////////////////////////////////////////
 		//Url to the protected resource 
 		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/members";
@@ -270,14 +242,14 @@ public class SampleMembers {
 		request.addQuerystringParameter("access_token", access_token);
 		
 		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
-		request.addQuerystringParameter("startindex", "0"); //By default is 0 i.e start at index 
-		request.addQuerystringParameter("maxresults", "50"); //By default is 50 i.e maximum of fifty claims
-		request.addQuerystringParameter("status", "0");   //By default is 0 i.e claims not picked
+		request.addQuerystringParameter("startindex", "1"); //By default is 1 i.e start at index 1
+		request.addQuerystringParameter("maxresults", "2"); //By default is 30 i.e maximum of fifty members
+		request.addQuerystringParameter("status", "0");   //By default is 0 i.e members not picked
 		request.addQuerystringParameter("restrict", "");  // Used when filtering the request
-		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the claims in what format
+		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the members in what format
 		////////////////////////////////////////////////////////////////////////////////
 	
-		//Send the request to the resource server for processing and retreive claims
+		//Send the request to the resource server for processing and retrieve members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we found...");
@@ -294,30 +266,26 @@ public class SampleMembers {
            
 	    	//The request was successful
 		    String content = response.getBody();
-           // System.out.println(content);
+            System.out.println(content);
 		   //Simplest approach is to convert the results  into a json array
-		    JSONObject member_obj = new JSONObject(content);
-		    JSONArray member_array = member_obj.getJSONArray("members");
+		  //  JSONObject member_obj = new JSONObject(content);
+		 //   JSONArray member_array = member_obj.getJSONArray("members");
 		    
 		    //System.out.println(member_array);
 		    
-		    for(int i = 0 ; i < member_array.length() ; i++){
-
-			     
-			   System.out.print(member_array.getJSONObject(i).getString("membershipNumber"));
-			   System.out.print(" : ");
-		       System.out.println(member_array.getJSONObject(i).getString("staffNumber"));
-
+		   // for(int i = 0 ; i < member_array.length() ; i++){
+			//   System.out.print(member_array.getJSONObject(i).getString("membershipNumber"));
+			//   System.out.print(" : ");
+		   //    System.out.println(member_array.getJSONObject(i).getString("staffNumber"));
 		       //YOU CAN NOW SAVE THE DATA INTO A TABLE FOR FUTURE USE
-		    }
+		  //  }
 		    
 
 		  
 	    }
 
     //////////////////////////////////////////////////////////////////////////////////////////	
-
-
+*/
 		
 
 		
@@ -331,9 +299,9 @@ public class SampleMembers {
 	///////////////////////////////////////////////////////////////////////////////
 
 	    //Url to the protected resource 
-		//i.e Client requesting for claim with id 20013
+		//i.e Client requesting for member with id 20013
 		//Url to the protected resource 
-		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/members/78";
+		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/members/141119490688";
 		
 	    // Now let's go and ask  a protected resource!
 	    System.out.println("Now we're going to access a protected resource...");
@@ -347,7 +315,7 @@ public class SampleMembers {
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 	
-		//Send the request to the resource server for processing and retreive claims
+		//Send the request to the resource server for processing and retreive members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we found...");
@@ -364,12 +332,12 @@ public class SampleMembers {
            
 	    	//The request was successful
 		    String content = response.getBody();
-           // System.out.println(content);
+            System.out.println(content);
 		   //Simplest approach is to convert the results  into a json array
-		    JSONObject member_obj = new JSONObject(content);
+		   // JSONObject member_obj = new JSONObject(content);
 
 		    //System.out.println(member_array);
-		    System.out.println(member_obj.get("membershipNumber") +" : "+member_obj.get("staffNumber"));
+		    //System.out.println(member_obj.get("membershipNumber") +" : "+member_obj.get("staffNumber"));
   
 	    }
 
@@ -382,7 +350,7 @@ public class SampleMembers {
 
 		/**
 		 * Demonstration of a simple GET request to the SMART API.
-		 *  i.e can be used by clients to search for specific claims etc.
+		 *  i.e can be used by clients to search for specific members etc.
 		 */
 		
 /*
@@ -397,22 +365,22 @@ public class SampleMembers {
 		
 		// To make sure all our query parameters are encoded properly we add them
 		// using scribe rather than putting them in the URL
-		request.addQuerystringParameter("q", "Y");
+		request.addQuerystringParameter("q", "MULAMA");
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
 		request.addQuerystringParameter("country", "kenya");
-		request.addQuerystringParameter("format", "json"); 
+		request.addQuerystringParameter("format", "xml"); 
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 		
 		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
-		//request.addQuerystringParameter("startindex", "0"); //By default is 0 i.e start at index 
-		//request.addQuerystringParameter("maxresults", "2"); //By default is 50 i.e maximum of fifty claims
-		request.addQuerystringParameter("status", "0");   //By default is 0 i.e claims not picked
+		request.addQuerystringParameter("startindex", "1"); //By default is 1 i.e start at index 
+		request.addQuerystringParameter("maxresults", "2"); //By default is 30 i.e maximum of fifty members
+		request.addQuerystringParameter("status", "0");   //By default is 0 i.e members not picked
 	//	request.addQuerystringParameter("restrict", "");  // Used when filtering the request
-		//request.addQuerystringParameter("orderby", "transaction_date asc"); //Order the claims in what format
+		//request.addQuerystringParameter("orderby", "transaction_date asc"); //Order the members in what format
 		////////////////////////////////////////////////////////////////////////////////
 	
-		//Send the request to the resource server for processing and retreive claims
+		//Send the request to the resource server for processing and retreive members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we found...");
@@ -430,20 +398,17 @@ public class SampleMembers {
 
 	    	//The request was successful
 		    String content = response.getBody();
-	            //System.out.println(content);
+	        System.out.println(content);
 			   //Simplest approach is to convert the results  into a json array
-			    JSONObject member_obj = new JSONObject(content);
-			    JSONArray member_array = member_obj.getJSONArray("members");
-			    for(int i = 0 ; i < member_array.length() ; i++){
-			    	
+			   // JSONObject member_obj = new JSONObject(content);
+			  //  JSONArray member_array = member_obj.getJSONArray("members");
+			   // for(int i = 0 ; i < member_array.length() ; i++){
 			       //i.e We are retrieving only member names whose users are called fred
-				     
-				   System.out.print(member_array.getJSONObject(i).getString("membershipNumber"));
-				   System.out.print(" : ");
-			       System.out.println(member_array.getJSONObject(i).getString("staffNumber"));
-
+				//   System.out.print(member_array.getJSONObject(i).getString("membershipNumber"));
+				//   System.out.print(" : ");
+			   //    System.out.println(member_array.getJSONObject(i).getString("staffNumber"));
 			       //YOU CAN NOW SAVE THE DATA INTO A TABLE FOR FUTURE USE
-			    }
+			  //  }
 			    
 	    }
    
@@ -477,14 +442,14 @@ public class SampleMembers {
 		request.addQuerystringParameter("access_token", access_token);
 		
 		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
-		request.addQuerystringParameter("startindex", "0"); //By default is 0 i.e start at index 
-		request.addQuerystringParameter("maxresults", "50"); //By default is 50 i.e maximum of fifty claims
-		request.addQuerystringParameter("status", "0");   //By default is 0 i.e claims not picked
+		request.addQuerystringParameter("startindex", "1"); //By default is 1 i.e start at index 
+		request.addQuerystringParameter("maxresults", "2"); //By default is 30 i.e maximum of fifty members
+		request.addQuerystringParameter("status", "0");   //By default is 0 i.e members not picked
 		request.addQuerystringParameter("restrict", "");  // Used when filtering the request
-		request.addQuerystringParameter("orderby", "join_date asc"); //Order the claims in what format
+		request.addQuerystringParameter("orderby", "join_date asc"); //Order the members in what format
 		////////////////////////////////////////////////////////////////////////////////
 	
-		//Send the request to the resource server for processing and retreive claims
+		//Send the request to the resource server for processing and retreive members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we found...");
@@ -501,22 +466,19 @@ public class SampleMembers {
            
 	    	//The request was successful
 		    String content = response.getBody();
-           // System.out.println(content);
+            System.out.println(content);
 		   //Simplest approach is to convert the results  into a json array
-		    JSONObject member_obj = new JSONObject(content);
-		    JSONArray member_array = member_obj.getJSONArray("members");
+		   // JSONObject member_obj = new JSONObject(content);
+		   // JSONArray member_array = member_obj.getJSONArray("members");
 		    
 		    //System.out.println(member_array);
 		    
-		    for(int i = 0 ; i < member_array.length() ; i++){
-
-			     
-			   System.out.print(member_array.getJSONObject(i).getString("membershipNumber"));
-			   System.out.print(" : ");
-		       System.out.println(member_array.getJSONObject(i).getString("staffNumber"));
-
+		    //for(int i = 0 ; i < member_array.length() ; i++){
+			//   System.out.print(member_array.getJSONObject(i).getString("membershipNumber"));
+			//   System.out.print(" : ");
+		    //   System.out.println(member_array.getJSONObject(i).getString("staffNumber"));
 		       //YOU CAN NOW SAVE THE DATA INTO A TABLE FOR FUTURE USE
-		    }
+		   // }
 		    
 
 		  
@@ -538,9 +500,9 @@ public class SampleMembers {
 	///////////////////////////////////////////////////////////////////////////////
 
 	    //Url to the protected resource 
-		//i.e Client requesting for claim with id 20013
+		//i.e Client requesting for member with id 20013
 		//Url to the protected resource 
-		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/members/changes/789";
+		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/members/changes/77";
 		
 	    // Now let's go and ask  a protected resource!
 	    System.out.println("Now we're going to access a protected resource...");
@@ -550,11 +512,11 @@ public class SampleMembers {
 		// using scribe rather than putting them in the URL
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
 		request.addQuerystringParameter("country", "kenya");
-		request.addQuerystringParameter("format", "json"); 
+		request.addQuerystringParameter("format", "xml"); 
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 	
-		//Send the request to the resource server for processing and retreive claims
+		//Send the request to the resource server for processing and retreive members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we found...");
@@ -571,12 +533,12 @@ public class SampleMembers {
            
 	    	//The request was successful
 		    String content = response.getBody();
-           // System.out.println(content);
+            System.out.println(content);
 		   //Simplest approach is to convert the results  into a json array
-		    JSONObject member_obj = new JSONObject(content);
+		   // JSONObject member_obj = new JSONObject(content);
 
 		    //System.out.println(member_array);
-		    System.out.println(member_obj.get("membershipNumber") +" : "+member_obj.get("staffNumber"));
+		  //  System.out.println(member_obj.get("membershipNumber") +" : "+member_obj.get("staffNumber"));
   
 	    }
 
@@ -602,27 +564,25 @@ public class SampleMembers {
 
 		// To make sure all our query parameters are encoded properly we add them
 		// using scribe rather than putting them in the URL
-		request.addQuerystringParameter("memberNo", "6686");
-		request.addQuerystringParameter("staffNo", "567");
-		request.addQuerystringParameter("surname", "57876796");
-		request.addQuerystringParameter("secondName", "");
-		request.addQuerystringParameter("thirdName", "8889");
-		request.addQuerystringParameter("otherNames", "");
-		request.addQuerystringParameter("reorderDate", "2014-07-31");
+		request.addQuerystringParameter("memberNumber", "6686");
+		request.addQuerystringParameter("staffNumber", "567");
+		request.addQuerystringParameter("surname", "vggf");
+		request.addQuerystringParameter("secondName", "ewr");
+		request.addQuerystringParameter("thirdName", "fger");
+		request.addQuerystringParameter("otherNames", "erer");
 		request.addQuerystringParameter("cardSerialNumber", "78987");
-		request.addQuerystringParameter("printDate", "2014-07-31");
-		request.addQuerystringParameter("userId", "78987");
-		request.addQuerystringParameter("reorderReason", "78987");
-		request.addQuerystringParameter("cardRequestNo", "78987");
+		request.addQuerystringParameter("userId", "888888");
+		request.addQuerystringParameter("reorderReason", "ytry");
+		request.addQuerystringParameter("cardRequestNumber", "78987");
 
 		//Below parameters are required to process your request
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
 		request.addQuerystringParameter("country", "kenya");
-		request.addQuerystringParameter("format", "xml"); 
+		request.addQuerystringParameter("format", "json"); 
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 	
-		//Send the request to the resource server for processing and retrieve claims
+		//Send the request to the resource server for processing and retrieve members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we have...");
@@ -645,7 +605,7 @@ public class SampleMembers {
 
 	    }
 	    //////////////////////////////////////////////////////////////////////////////////
-	*/	
+*/
 	    
 	    
 	    
@@ -669,19 +629,18 @@ public class SampleMembers {
 		request.addQuerystringParameter("smartBillId", "6686");
 		request.addQuerystringParameter("returnedAmount", "500");
 		request.addQuerystringParameter("returnCode", "57876796");
-		request.addQuerystringParameter("returnReason", "");
+		request.addQuerystringParameter("returnReason", "6565");
 		request.addQuerystringParameter("dateEntered", "2014-07-31");
-		request.addQuerystringParameter("memberNumber", "");
+		request.addQuerystringParameter("memberNumber", "484");
 		request.addQuerystringParameter("anniv", "11");
 		request.addQuerystringParameter("providerCode", "78987");
 		request.addQuerystringParameter("invoiceNumber", "4545");
-		request.addQuerystringParameter("actionCode", "78987");
-		request.addQuerystringParameter("actionName", "78987");
 		request.addQuerystringParameter("userId", "78987");
 		request.addQuerystringParameter("clnPolCode", "78987");
 		request.addQuerystringParameter("invoiceDate", "2014-07-31");
 		request.addQuerystringParameter("invoiceId", "78987");
-
+		request.addQuerystringParameter("benefitCode", "78987");
+		
 
 		//Below parameters are required to process your request
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
@@ -690,7 +649,7 @@ public class SampleMembers {
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 	
-		//Send the request to the resource server for processing and retrieve claims
+		//Send the request to the resource server for processing and retrieve members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we have...");
@@ -713,7 +672,7 @@ public class SampleMembers {
 
 	    }
 	    //////////////////////////////////////////////////////////////////////////////////
-	  */ 
+*/
 		
 		
 		
@@ -740,20 +699,18 @@ public class SampleMembers {
 		request.addQuerystringParameter("smartBillId", "6686");
 		request.addQuerystringParameter("returnedAmount", "500");
 		request.addQuerystringParameter("returnCode", "57876796");
-		request.addQuerystringParameter("returnReason", "");
+		request.addQuerystringParameter("returnReason", "6565");
 		request.addQuerystringParameter("dateEntered", "2014-07-31");
-		request.addQuerystringParameter("memberNumber", "");
+		request.addQuerystringParameter("memberNumber", "484");
 		request.addQuerystringParameter("anniv", "11");
 		request.addQuerystringParameter("providerCode", "78987");
 		request.addQuerystringParameter("invoiceNumber", "4545");
-		request.addQuerystringParameter("actionCode", "78987");
-		request.addQuerystringParameter("actionName", "78987");
 		request.addQuerystringParameter("userId", "78987");
 		request.addQuerystringParameter("clnPolCode", "78987");
 		request.addQuerystringParameter("invoiceDate", "2014-07-31");
 		request.addQuerystringParameter("invoiceId", "78987");
-
-
+		request.addQuerystringParameter("benefitCode", "78987");
+		
 		//Below parameters are required to process your request
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
 		request.addQuerystringParameter("country", "kenya");
@@ -761,7 +718,7 @@ public class SampleMembers {
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 	
-		//Send the request to the resource server for processing and retrieve claims
+		//Send the request to the resource server for processing and retrieve members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we have...");
@@ -809,22 +766,13 @@ public class SampleMembers {
 
 		// To make sure all our query parameters are encoded properly we add them
 		// using scribe rather than putting them in the URL
-		request.addQuerystringParameter("smartBillId", "6686");
-		request.addQuerystringParameter("returnedAmount", "500");
-		request.addQuerystringParameter("returnCode", "57876796");
-		request.addQuerystringParameter("returnReason", "");
-		request.addQuerystringParameter("dateEntered", "2014-07-31");
-		request.addQuerystringParameter("memberNumber", "");
+		request.addQuerystringParameter("memberNumber", "DSAD65SDAS5");
+		request.addQuerystringParameter("userId", "4646");
 		request.addQuerystringParameter("anniv", "11");
-		request.addQuerystringParameter("providerCode", "78987");
-		request.addQuerystringParameter("invoiceNumber", "4545");
-		request.addQuerystringParameter("actionCode", "78987");
-		request.addQuerystringParameter("actionName", "78987");
-		request.addQuerystringParameter("userId", "78987");
-		request.addQuerystringParameter("clnPolCode", "78987");
-		request.addQuerystringParameter("invoiceDate", "2014-07-31");
-		request.addQuerystringParameter("invoiceId", "78987");
-
+		request.addQuerystringParameter("statusReason", "MEMBER SHOULD BE RENEWED FOR A NEW COVER PERIOD");
+		request.addQuerystringParameter("statusDate", "2014-07-31");
+		request.addQuerystringParameter("startDate", "2014-07-31");
+		request.addQuerystringParameter("endDate", "2014-07-31");
 
 		//Below parameters are required to process your request
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
@@ -833,7 +781,7 @@ public class SampleMembers {
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 	
-		//Send the request to the resource server for processing and retrieve claims
+		//Send the request to the resource server for processing and retrieve members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we have...");
@@ -892,7 +840,7 @@ public class SampleMembers {
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 	
-		//Send the request to the resource server for processing and retrieve claims
+		//Send the request to the resource server for processing and retrieve members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we have...");
@@ -915,7 +863,7 @@ public class SampleMembers {
 
 	    }
 	    //////////////////////////////////////////////////////////////////////////////////
-*/   
+*/
 
 		
 		/**
@@ -952,7 +900,7 @@ public class SampleMembers {
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 	
-		//Send the request to the resource server for processing and retrieve claims
+		//Send the request to the resource server for processing and retrieve members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we have...");
@@ -995,10 +943,7 @@ public class SampleMembers {
 
 		// To make sure all our query parameters are encoded properly we add them
 		// using scribe rather than putting them in the URL
-
-		//@NotNull
-		//@NotEmpty	
-		request.addQuerystringParameter("memberNumber", "DSAD65SDAS5");
+    	request.addQuerystringParameter("memberNumber", "DSAD65SDAS5");
 		request.addQuerystringParameter("userId", "4646");
 		request.addQuerystringParameter("anniv", "11");
 		request.addQuerystringParameter("statusReason", "TO CORRECT ERROR THAT OCCURED DURING TEST");
@@ -1012,7 +957,7 @@ public class SampleMembers {
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 	
-		//Send the request to the resource server for processing and retrieve claims
+		//Send the request to the resource server for processing and retrieve members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we have...");
@@ -1055,23 +1000,18 @@ public class SampleMembers {
 
 		// To make sure all our query parameters are encoded properly we add them
 		// using scribe rather than putting them in the URL
-
-		//@NotNull
-		//@NotEmpty	
 		request.addQuerystringParameter("memberNumber", "87045154-03");
 		request.addQuerystringParameter("userId", "MARAKWA");
 		request.addQuerystringParameter("statusReason", "REGISTERED FINGERPRINT NOT ACCEPTED AT SERVISE PROVIDER LEVEL-GERTRUDES MUTHAIGA");
-		//request.addQuerystringParameter("statusDate", "2014-07-31");
-
 
 		//Below parameters are required to process your request
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
 		request.addQuerystringParameter("country", "kenya");
-		request.addQuerystringParameter("format", "json"); 
+		request.addQuerystringParameter("format", "xml"); 
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 	
-		//Send the request to the resource server for processing and retrieve claims
+		//Send the request to the resource server for processing and retrieve members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we have...");
@@ -1118,19 +1058,19 @@ public class SampleMembers {
 		// using scribe rather than putting them in the URL
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
 		request.addQuerystringParameter("country", "kenya");
-		request.addQuerystringParameter("format", "json"); 
+		request.addQuerystringParameter("format", "xml"); 
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 		
 		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
-		request.addQuerystringParameter("startindex", "0"); //By default is 0 i.e start at index 
-		request.addQuerystringParameter("maxresults", "50"); //By default is 50 i.e maximum of fifty claims
-		request.addQuerystringParameter("status", "1");   //By default is 0 i.e claims not picked
+		request.addQuerystringParameter("startindex", "1"); //By default is 1 i.e start at index 
+		request.addQuerystringParameter("maxresults", "30"); //By default is 30 i.e maximum of fifty members
+		request.addQuerystringParameter("status", "1");   //By default is 0 i.e members not picked
 		request.addQuerystringParameter("restrict", "");  // Used when filtering the request
-		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the claims in what format
+		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the members in what format
 		////////////////////////////////////////////////////////////////////////////////
 
-		//Send the request to the resource server for processing and retreive claims
+		//Send the request to the resource server for processing and retreive members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we found...");
@@ -1179,19 +1119,19 @@ public class SampleMembers {
 		// using scribe rather than putting them in the URL
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
 		request.addQuerystringParameter("country", "kenya");
-		request.addQuerystringParameter("format", "json"); 
+		request.addQuerystringParameter("format", "xml"); 
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 		
 		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
-		request.addQuerystringParameter("startindex", "0"); //By default is 0 i.e start at index 
-		request.addQuerystringParameter("maxresults", "50"); //By default is 50 i.e maximum of fifty claims
-		request.addQuerystringParameter("status", "1");   //By default is 0 i.e claims not picked
+		request.addQuerystringParameter("startindex", "1"); //By default is 1 i.e start at index 
+		request.addQuerystringParameter("maxresults", "30"); //By default is 30 i.e maximum of fifty members
+		request.addQuerystringParameter("status", "1");   //By default is 0 i.e members not picked
 		request.addQuerystringParameter("restrict", "");  // Used when filtering the request
-		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the claims in what format
+		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the members in what format
 		////////////////////////////////////////////////////////////////////////////////
 
-		//Send the request to the resource server for processing and retreive claims
+		//Send the request to the resource server for processing and retreive members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we found...");
@@ -1247,14 +1187,14 @@ public class SampleMembers {
 		request.addQuerystringParameter("access_token", access_token);
 		
 		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
-		request.addQuerystringParameter("startindex", "0"); //By default is 0 i.e start at index 
-		request.addQuerystringParameter("maxresults", "50"); //By default is 50 i.e maximum of fifty claims
-		request.addQuerystringParameter("status", "1");   //By default is 0 i.e claims not picked
+		request.addQuerystringParameter("startindex", "1"); //By default is 1 i.e start at index 
+		request.addQuerystringParameter("maxresults", "30"); //By default is 30 i.e maximum of fifty members
+		request.addQuerystringParameter("status", "1");   //By default is 0 i.e members not picked
 		request.addQuerystringParameter("restrict", "");  // Used when filtering the request
-		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the claims in what format
+		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the members in what format
 		////////////////////////////////////////////////////////////////////////////////
 
-		//Send the request to the resource server for processing and retreive claims
+		//Send the request to the resource server for processing and retreive members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we found...");
@@ -1307,14 +1247,14 @@ public class SampleMembers {
 		request.addQuerystringParameter("access_token", access_token);
 		
 		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
-		request.addQuerystringParameter("startindex", "0"); //By default is 0 i.e start at index 
-		request.addQuerystringParameter("maxresults", "50"); //By default is 50 i.e maximum of fifty claims
-		request.addQuerystringParameter("status", "1");   //By default is 0 i.e claims not picked
+		request.addQuerystringParameter("startindex", "1"); //By default is 1 i.e start at index 
+		request.addQuerystringParameter("maxresults", "30"); //By default is 30 i.e maximum of fifty members
+		request.addQuerystringParameter("status", "1");   //By default is 0 i.e members not picked
 		request.addQuerystringParameter("restrict", "");  // Used when filtering the request
-		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the claims in what format
+		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the members in what format
 		////////////////////////////////////////////////////////////////////////////////
 
-		//Send the request to the resource server for processing and retreive claims
+		//Send the request to the resource server for processing and retreive members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we found...");
@@ -1362,14 +1302,14 @@ public class SampleMembers {
 		request.addQuerystringParameter("access_token", access_token);
 		
 		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
-		request.addQuerystringParameter("startindex", "0"); //By default is 0 i.e start at index 
-		request.addQuerystringParameter("maxresults", "50"); //By default is 50 i.e maximum of fifty claims
-		request.addQuerystringParameter("status", "1");   //By default is 0 i.e claims not picked
+		request.addQuerystringParameter("startindex", "1"); //By default is 1 i.e start at index 
+		request.addQuerystringParameter("maxresults", "30"); //By default is 30 i.e maximum of fifty members
+		request.addQuerystringParameter("status", "1");   //By default is 0 i.e members not picked
 		request.addQuerystringParameter("restrict", "");  // Used when filtering the request
-		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the claims in what format
+		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the members in what format
 		////////////////////////////////////////////////////////////////////////////////
 
-		//Send the request to the resource server for processing and retreive claims
+		//Send the request to the resource server for processing and retreive members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we found...");
@@ -1418,14 +1358,14 @@ public class SampleMembers {
 		request.addQuerystringParameter("access_token", access_token);
 		
 		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
-		request.addQuerystringParameter("startindex", "0"); //By default is 0 i.e start at index 
-		request.addQuerystringParameter("maxresults", "50"); //By default is 50 i.e maximum of fifty claims
-		request.addQuerystringParameter("status", "1");   //By default is 0 i.e claims not picked
+		request.addQuerystringParameter("startindex", "1"); //By default is 1 i.e start at index 
+		request.addQuerystringParameter("maxresults", "30"); //By default is 30 i.e maximum of fifty members
+		request.addQuerystringParameter("status", "1");   //By default is 0 i.e members not picked
 		request.addQuerystringParameter("restrict", "");  // Used when filtering the request
-		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the claims in what format
+		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the members in what format
 		////////////////////////////////////////////////////////////////////////////////
 
-		//Send the request to the resource server for processing and retreive claims
+		//Send the request to the resource server for processing and retreive members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we found...");
@@ -1474,14 +1414,14 @@ public class SampleMembers {
 		request.addQuerystringParameter("access_token", access_token);
 		
 		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
-		request.addQuerystringParameter("startindex", "0"); //By default is 0 i.e start at index 
-		request.addQuerystringParameter("maxresults", "50"); //By default is 50 i.e maximum of fifty claims
-		request.addQuerystringParameter("status", "1");   //By default is 0 i.e claims not picked
+		request.addQuerystringParameter("startindex", "1"); //By default is 1 i.e start at index 
+		request.addQuerystringParameter("maxresults", "30"); //By default is 30 i.e maximum of fifty members
+		request.addQuerystringParameter("status", "1");   //By default is 0 i.e members not picked
 		request.addQuerystringParameter("restrict", "");  // Used when filtering the request
-		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the claims in what format
+		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the members in what format
 		////////////////////////////////////////////////////////////////////////////////
 
-		//Send the request to the resource server for processing and retreive claims
+		//Send the request to the resource server for processing and retreive members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we found...");
@@ -1532,14 +1472,14 @@ public class SampleMembers {
 		request.addQuerystringParameter("access_token", access_token);
 		
 		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
-		request.addQuerystringParameter("startindex", "0"); //By default is 0 i.e start at index 
-		request.addQuerystringParameter("maxresults", "50"); //By default is 50 i.e maximum of fifty claims
-		request.addQuerystringParameter("status", "1");   //By default is 0 i.e claims not picked
+		request.addQuerystringParameter("startindex", "1"); //By default is 1 i.e start at index 
+		request.addQuerystringParameter("maxresults", "30"); //By default is 30 i.e maximum of fifty members
+		request.addQuerystringParameter("status", "1");   //By default is 0 i.e members not picked
 		request.addQuerystringParameter("restrict", "");  // Used when filtering the request
-		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the claims in what format
+		request.addQuerystringParameter("orderby", "insert_date asc"); //Order the members in what format
 		////////////////////////////////////////////////////////////////////////////////
 
-		//Send the request to the resource server for processing and retreive claims
+		//Send the request to the resource server for processing and retreive members
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we found...");

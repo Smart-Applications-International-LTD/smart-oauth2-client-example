@@ -10,7 +10,7 @@ import java.util.List;
 import com.smartapplications.libraries.OAuth2;
 import com.smartapplications.libraries.OAuthConstants;
 
-//SAMPLE CLIENT 
+
 
 public class SampleClaims {
 	
@@ -58,16 +58,16 @@ public class SampleClaims {
 		// using scribe rather than putting them in the URL
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
 		request.addQuerystringParameter("country", "kenya");
-		request.addQuerystringParameter("format", "json"); 
+		request.addQuerystringParameter("format", "xml"); 
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 		
 		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
-		request.addQuerystringParameter("startindex", "0"); //By default is 0 i.e start at index 
-		request.addQuerystringParameter("maxresults", "50"); //By default is 50 i.e maximum of fifty claims
-		//request.addQuerystringParameter("status", "0");   //By default is 0 i.e claims not picked
+		request.addQuerystringParameter("startindex", "0"); //By default is 1 i.e start at index 
+		request.addQuerystringParameter("maxresults", "1"); //By default is 30 i.e maximum of fifty claims
+		request.addQuerystringParameter("status", "0");   //By default is 0 i.e claims not picked
 		//request.addQuerystringParameter("restrict", "");  // Used when filtering the request
-		request.addQuerystringParameter("orderby", "transaction_date asc"); //Order the claims in what format
+		//request.addQuerystringParameter("orderby", "transaction_date asc"); //Order the claims in what format
 		////////////////////////////////////////////////////////////////////////////////
 	
 		//Send the request to the resource server for processing and retreive claims
@@ -87,27 +87,25 @@ public class SampleClaims {
            
 	    	//The request was successful
 		    String content = response.getBody();
-           // System.out.println(content);
+            System.out.println(content);
 		   //Simplest approach is to convert the results  into a json array
-		    JSONObject claim_obj = new JSONObject(content);
-		    JSONArray claim_array = claim_obj.getJSONArray("claims");
-		    for(int i = 0 ; i < claim_array.length() ; i++){
-		    	
-		       //i.e We are retrieving only member names whose users are called fred
-			     
-			   System.out.print(claim_array.getJSONObject(i).getInt("id"));
-			   System.out.print(" : ");
-		       System.out.println(claim_array.getJSONObject(i).getString("memberNames"));
-
+		   // JSONObject claim_obj = new JSONObject(content);
+		  //  JSONArray claim_array = claim_obj.getJSONArray("claims");
+		   
+		   // for(int i = 0 ; i < claim_array.length() ; i++){
+		       //i.e We are retrieving only member names whose users are called fred		     
+			//   System.out.print(claim_array.getJSONObject(i).getInt("id"));
+			//   System.out.print(" : ");
+		    //   System.out.println(claim_array.getJSONObject(i).getString("memberNames"));
 		       //YOU CAN NOW SAVE THE DATA INTO A TABLE FOR FUTURE USE
-		    }
+		   // }
 
 		  
 	    }
 
     //////////////////////////////////////////////////////////////////////////////////////////	
 */
-
+	    
 		
 
 		
@@ -121,7 +119,7 @@ public class SampleClaims {
 	///////////////////////////////////////////////////////////////////////////////
 		//Url to the protected resource 
 		//i.e Client requesting for claim with id 65398
-		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/claims/23291505";
+		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/claims/300407606";
 		
 	    // Now let's go and ask  a protected resource!
 	    System.out.println("Now we're going to access a protected resource...");
@@ -132,7 +130,7 @@ public class SampleClaims {
 		// using scribe rather than putting them in the URL
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
 		request.addQuerystringParameter("country", "kenya");
-		request.addQuerystringParameter("format", "json"); 
+		request.addQuerystringParameter("format", "xml"); 
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 
@@ -153,10 +151,10 @@ public class SampleClaims {
            
 	    	//The request was successful
 		    String content = response.getBody();
-	       // System.out.println(content);
+	        System.out.println(content);
 	       //Simplest approach is to convert the results  into a json array
-		   JSONObject claim_obj = new JSONObject(content);
-		   System.out.println(claim_obj.get("id") +" : "+claim_obj.get("memberNames"));
+		  // JSONObject claim_obj = new JSONObject(content);
+		//   System.out.println(claim_obj.get("id") +" : "+claim_obj.get("memberNames"));
 		 //YOU CAN NOW SAVE THE DATA INTO A TABLE FOR FUTURE USE
 		   
 		    
@@ -164,8 +162,8 @@ public class SampleClaims {
 	    }
 
     //////////////////////////////////////////////////////////////////////////////////////////	
-	
-		*/
+*/
+		
 
 		
 		
@@ -175,7 +173,7 @@ public class SampleClaims {
 		 *  i.e can be used by clients to search for specific claims etc.
 		 */
 		
-		 /*
+	/*
 	///////////////////////////////////////////////////////////////////////////////
 		//Url to the protected resource 
 		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/claims/search";
@@ -187,7 +185,7 @@ public class SampleClaims {
 		
 		// To make sure all our query parameters are encoded properly we add them
 		// using scribe rather than putting them in the URL
-		request.addQuerystringParameter("q", "FRED");
+		request.addQuerystringParameter("q", "NJERI");
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
 		request.addQuerystringParameter("country", "kenya");
 		request.addQuerystringParameter("format", "xml"); 
@@ -195,9 +193,9 @@ public class SampleClaims {
 		request.addQuerystringParameter("access_token", access_token);
 		
 		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
-	  //request.addQuerystringParameter("startindex", "0"); //By default is 0 i.e start at index 
-		request.addQuerystringParameter("maxresults", "12"); //By default is 50 i.e maximum of fifty claims
-		request.addQuerystringParameter("status", "1");   //By default is 0 i.e claims not picked
+	    request.addQuerystringParameter("startindex", "1"); //By default is 1 i.e start at index 
+		request.addQuerystringParameter("maxresults", "12"); //By default is 30 i.e maximum of fifty claims
+		request.addQuerystringParameter("status", "0");   //By default is 0 i.e claims not picked
 	  //request.addQuerystringParameter("restrict", "");  // Used when filtering the request
 	  //request.addQuerystringParameter("orderby", "transaction_date asc"); //Order the claims in what format
 		////////////////////////////////////////////////////////////////////////////////
@@ -220,28 +218,25 @@ public class SampleClaims {
 
 	    	//The request was successful
 		    String content = response.getBody();
-	            System.out.println(content);
+	        System.out.println(content);
 		   
 			   //Simplest approach is to convert the results  into a json array
-			    JSONObject claim_obj = new JSONObject(content);
-			    JSONArray claim_array = claim_obj.getJSONArray("claims");
-			    for(int i = 0 ; i < claim_array.length() ; i++){
-			    	
-			       //i.e We are retrieving only member names whose users are called FRED
-				     
-				   System.out.print(claim_array.getJSONObject(i).getInt("id"));
-				   System.out.print(" : ");
-			       System.out.println(claim_array.getJSONObject(i).getString("memberNames"));
-
+			//    JSONObject claim_obj = new JSONObject(content);
+			 //   JSONArray claim_array = claim_obj.getJSONArray("claims");
+			 //   for(int i = 0 ; i < claim_array.length() ; i++){    	
+			//       //i.e We are retrieving only member names whose users are called FRED    
+			//	   System.out.print(claim_array.getJSONObject(i).getInt("id"));
+			//	   System.out.print(" : ");
+			  //     System.out.println(claim_array.getJSONObject(i).getString("memberNames"));
 			       //YOU CAN NOW SAVE THE DATA INTO A TABLE FOR FUTURE USE
-			    }
+			   // }
 
 			    
 			    
 	    }
    
     //////////////////////////////////////////////////////////////////////////////////////////	
-  */
+*/
 		
 
 		
@@ -250,12 +245,12 @@ public class SampleClaims {
 		 * i.e can be used by clients to inform us that a claim has switched.
 		 */
 		
-		/*
+/*
 	    //////////////////////////////////////////////////////////////////////////////////
       
 		//Url to the protected resource 
 		//i.e Clients informing us that claim 65398 has switched
-		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/claims/switched/65398";
+		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/claims/switched/299495225";
 		
 	    // Now let's go and update a protected resource!
 	    System.out.println("Now we're going to update a protected resource...");
@@ -266,7 +261,7 @@ public class SampleClaims {
 		//Below parameters are required to process your request
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
 		request.addQuerystringParameter("country", "kenya");
-		request.addQuerystringParameter("format", "json"); 
+		request.addQuerystringParameter("format", "xml"); 
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 	
@@ -299,7 +294,7 @@ public class SampleClaims {
 	    }
 	
 	    //////////////////////////////////////////////////////////////////////////////////
-	 */
+	*/
   
 		
 		
@@ -322,7 +317,7 @@ public class SampleClaims {
 		// To make sure all our query parameters are encoded properly we add them
 		// using scribe rather than putting them in the URL
 		//Below parameters are required to process your request
-		request.addQuerystringParameter("id", "65398,747,121,565");
+		request.addQuerystringParameter("id", "299495225,299501364,299502356,299511202");
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
 		request.addQuerystringParameter("country", "kenya");
 		request.addQuerystringParameter("format", "json"); 
@@ -360,12 +355,11 @@ public class SampleClaims {
 	    //////////////////////////////////////////////////////////////////////////////////
 */
 	    
+	    
+	    
+	    
 	}
 	
 	
-	
-	
-
-
 	
 }

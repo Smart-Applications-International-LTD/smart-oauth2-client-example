@@ -48,7 +48,7 @@ public class SampleBenefits {
 		 *  i.e clients can use it to give smart a list of benefits.
 		 */
 		
-
+/*
 	    //////////////////////////////////////////////////////////////////////////////////
     
 		//Url to the protected resource 
@@ -118,7 +118,7 @@ public class SampleBenefits {
 
 	    }
 	    //////////////////////////////////////////////////////////////////////////////////
-
+*/
 	    
 	    
 	    
@@ -143,19 +143,19 @@ public class SampleBenefits {
 		// using scribe rather than putting them in the URL
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
 		request.addQuerystringParameter("country", "kenya");
-		request.addQuerystringParameter("format", "json"); 
+		request.addQuerystringParameter("format", "xml"); 
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 		
 		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
-		request.addQuerystringParameter("startindex", "0"); //By default is 0 i.e start at index 
-		request.addQuerystringParameter("maxresults", "50"); //By default is 50 i.e maximum of fifty Benefits
+		request.addQuerystringParameter("startindex", "51"); //By default is 1 i.e start at index 
+		request.addQuerystringParameter("maxresults", "50"); //By default is 30 i.e maximum of fifty Benefits
 		request.addQuerystringParameter("status", "0");   //By default is 0 i.e Benefits not picked
 		request.addQuerystringParameter("restrict", "");  // Used when filtering the request
 		request.addQuerystringParameter("orderby", "date_added asc"); //Order the Benefits in what format
 		////////////////////////////////////////////////////////////////////////////////
 	
-		//Send the request to the resource server for processing and retreive Benefits
+		//Send the request to the resource server for processing and retrieve Benefits
 		Response response = request.send();
 
 	    System.out.println("Got it! Lets see what we found...");
@@ -172,11 +172,11 @@ public class SampleBenefits {
            
 	    	//The request was successful
 		    String content = response.getBody();
-           // System.out.println(content);
+            System.out.println(content);
 		   //Simplest approach is to convert the results  into a json array
-		    JSONObject benefit_obj = new JSONObject(content);
-		    JSONArray benefit_array = benefit_obj.getJSONArray("benefits");
-		    System.out.println(benefit_array);
+		    //JSONObject benefit_obj = new JSONObject(content);
+		    //JSONArray benefit_array = benefit_obj.getJSONArray("benefits");
+		    //System.out.println(benefit_array);
 
 		  
 	    }
@@ -190,14 +190,14 @@ public class SampleBenefits {
 		
 		/**
 		 * Demonstration of a simple GET request to the SMART API.
-		 *  i.e can be used by clients to retrieve a single claim.
+		 *  i.e can be used by clients to retrieve a single benefit.
 		 */
 		
 /*
 	///////////////////////////////////////////////////////////////////////////////
 		//Url to the protected resource 
-		//i.e Client requesting for claim with id 65398
-		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/benefits/1";
+		//i.e Client requesting for benefit with id 65398
+		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/benefits/5763193";
 		
 	    // Now let's go and ask  a protected resource!
 	    System.out.println("Now we're going to access a protected resource...");
@@ -208,7 +208,7 @@ public class SampleBenefits {
 		// using scribe rather than putting them in the URL
 		request.addQuerystringParameter("customerid", authhelper.CUSTOMER_ID());
 		request.addQuerystringParameter("country", "kenya");
-		request.addQuerystringParameter("format", "json"); 
+		request.addQuerystringParameter("format", "xml"); 
 		//The resource server will need you to provide this access_token or else it will drop the request
 		request.addQuerystringParameter("access_token", access_token);
 
@@ -229,10 +229,10 @@ public class SampleBenefits {
            
 	    	//The request was successful
 		    String content = response.getBody();
-	       // System.out.println(content);
+	        System.out.println(content);
 	       //Simplest approach is to convert the results  into a json array
-		   JSONObject claim_obj = new JSONObject(content);
-		   System.out.println(claim_obj);
+		   //JSONObject benefit_obj = new JSONObject(content);
+		   //System.out.println(benefit_obj);
 		 //YOU CAN NOW SAVE THE DATA INTO A TABLE FOR FUTURE USE
 		   
 		    
@@ -240,7 +240,7 @@ public class SampleBenefits {
 	    }
 
     //////////////////////////////////////////////////////////////////////////////////////////	
-	*/
+*/
 		
 
 	    
