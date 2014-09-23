@@ -129,7 +129,7 @@ public class SampleBenefits {
 		 *  i.e can be used by clients to retrieve multiple Benefits.
 		 */
 		
-/*
+
 	///////////////////////////////////////////////////////////////////////////////
 		//Url to the protected resource 
 		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/benefits";
@@ -182,7 +182,7 @@ public class SampleBenefits {
 	    }
 
     //////////////////////////////////////////////////////////////////////////////////////////	
-*/
+
 
 		
 

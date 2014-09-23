@@ -63,8 +63,8 @@ public class SampleClaims {
 		request.addQuerystringParameter("access_token", access_token);
 		
 		///////////////////////////////OPTIONAL PARAMETERS//////////////////////////////
-		request.addQuerystringParameter("startindex", "0"); //By default is 1 i.e start at index 
-		request.addQuerystringParameter("maxresults", "1"); //By default is 30 i.e maximum of fifty claims
+		request.addQuerystringParameter("startindex", "1"); //By default is 1 i.e start at index 
+		request.addQuerystringParameter("maxresults", "30"); //By default is 30 i.e maximum of fifty claims
 		request.addQuerystringParameter("status", "0");   //By default is 0 i.e claims not picked
 		//request.addQuerystringParameter("restrict", "");  // Used when filtering the request
 		//request.addQuerystringParameter("orderby", "transaction_date asc"); //Order the claims in what format
@@ -119,7 +119,7 @@ public class SampleClaims {
 	///////////////////////////////////////////////////////////////////////////////
 		//Url to the protected resource 
 		//i.e Client requesting for claim with id 65398
-		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/claims/300407606";
+		String REQ_URL   = OAuthConstants.RESOURCE_SERVER_URL+"/claims/299513250";
 		
 	    // Now let's go and ask  a protected resource!
 	    System.out.println("Now we're going to access a protected resource...");
@@ -165,7 +165,6 @@ public class SampleClaims {
 */
 		
 
-		
 		
 
 		/**
@@ -245,7 +244,7 @@ public class SampleClaims {
 		 * i.e can be used by clients to inform us that a claim has switched.
 		 */
 		
-/*
+
 	    //////////////////////////////////////////////////////////////////////////////////
       
 		//Url to the protected resource 
@@ -294,7 +293,7 @@ public class SampleClaims {
 	    }
 	
 	    //////////////////////////////////////////////////////////////////////////////////
-	*/
+	
   
 		
 		
