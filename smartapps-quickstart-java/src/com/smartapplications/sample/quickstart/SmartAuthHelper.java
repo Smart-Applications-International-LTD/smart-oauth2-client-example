@@ -14,7 +14,7 @@ public class SmartAuthHelper {
 	 *  N/B FOR CUSTOMER IDENTIFICATION.
 	 *  A customer can only have one CUSTOMER_ID.
 	 */
-    private static final String CUSTOMER_ID = "9652498631248765"; //YOUR ID // i.e FOR SMART API TEST IDENTIFICATION
+    private static final String CUSTOMER_ID = "XXXXXXXXXXXXXXXXXXXXXXXX"; //YOUR ID // i.e FOR SMART API TEST IDENTIFICATION
      
 
 	/**
@@ -22,7 +22,7 @@ public class SmartAuthHelper {
 	 * N/B FOR IDENTIFICATION OF THE SYSTEMS OWNED BY THE CUSTOMER.
 	 * Customer can have as many CLIENT_IDs as the systems they are using to connect to smart. 
 	 */
-    private static final String CLIENT_ID = "4216865795234581"; //YOUR APPLICATION ID // i.e SMART API TEST DESKTOP APPLICATION IN KENYA
+    private static final String CLIENT_ID = "XXXXXXXXXXXXXXXXXXXXXXXX"; //YOUR APPLICATION ID // i.e SMART API TEST DESKTOP APPLICATION IN KENYA
 
 	
 	/**
@@ -30,7 +30,7 @@ public class SmartAuthHelper {
 	 * N/B FOR VERIFICATION OF THE SYSTEMS OWNED BY THE CUSTOMER.
 	 * Customer can have as many CLIENT_SECRETs as the systems they are using to connect to smart. 
 	 */
-	private static final String CLIENT_SECRET = "D5S4HLGJDHSOR8SW9GO456AQ"; //YOUR APPLICATION SECRET // i.e SECRET FOR SMART API TEST DESKTOP APPLICATION IN KENYA
+	private static final String CLIENT_SECRET = "XXXXXXXXXXXXXXXXXXXXXXXX"; //YOUR APPLICATION SECRET // i.e SECRET FOR SMART API TEST DESKTOP APPLICATION IN KENYA
 
 
 	/**
@@ -43,9 +43,9 @@ public class SmartAuthHelper {
 	 * Smart authentication constants
 	 * N/B Not necessary for Smart Application Clients i.e insurance companies
 	 */
-	private static final Iterable<String> SCOPE = Arrays.asList("https://www.smartapis.com/auth/userinfo.profile;https://www.smartapis.com/auth/userinfo.email".split(";"));
+	private static final Iterable<String> SCOPE = Arrays.asList("");
 	
-	private static final String USER_INFO_URL = "https://www.smartapis.com/oauth2/v1/userinfo";
+	private static final String USER_INFO_URL = "";
 
 	private String stateToken;
 	
